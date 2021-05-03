@@ -38,7 +38,7 @@ jobs:
           EOF
       - name: Environment Setup
         run: |
-          source setup_env
+          bash setup_env
       - name: SSH connection to Actions
         continue-on-error: true
         timeout-minutes: 340
