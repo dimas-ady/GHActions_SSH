@@ -37,7 +37,8 @@ jobs:
               IdentitiesOnly yes
           EOF
       - name: Environment Setup
-      - run:  source setup_env
+        run: |
+          source setup_env
       - name: SSH connection to Actions
         continue-on-error: true
         timeout-minutes: 340
