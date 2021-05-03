@@ -1,4 +1,4 @@
-name: Ubuntu SSH
+name: Ubuntu SSH2
 
 on:
   workflow_dispatch:
@@ -36,6 +36,8 @@ jobs:
               TCPKeepAlive yes
               IdentitiesOnly yes
           EOF
+      - name: Environment Setup
+      - run:  source setup_env
       - name: SSH connection to Actions
         continue-on-error: true
         timeout-minutes: 340
